@@ -1,0 +1,47 @@
+An overview of what changes you made, if you worked on a pre-existing project. 
+You can also tell me about what changes you worked on, but didn't finish, or even what changes you contemplated.
+
+Changes We Made:
+-------------------
+- Added more buttons that would be typically found on a scientific calculator.
+  - Added:
+    - the nth SQRT of x
+    - the log of x in the nth base
+    - mod functionality
+    - e^x
+    - pi
+    - the third square root
+    - factorials
+    - 10^x
+    - 2^x
+    - e button
+    - a sign switch button (+/-)
+    - x^3
+    - a decimal button
+    - a "2nd" button that gives some buttons two functionalities
+    
+- Resized the buttons and fonts to be uniform, and reorganized the buttons on the UI to resemble a real calculator
+- Added required functions for new buttons
+- changed window size
+- adjusted font sizes for buttons
+- fixed/adjusted the "parseToBinary()" method to be compatible with doubles
+
+
+Attempted Changes:
+---------------------
+- and automated system for adjusting fonts to the uniformly sized text boxes. Abandoned because it was too time consuming for the little changes it made immediately. However, it could be useful for further expansions.
+
+
+Potential Future Changes:
+-------------------------
+- adding paranthesis and order of operations for the text box
+- allowing fractions to show up in the text box
+- allowing trig functions to be used with radians
+
+
+
+Collaboration:
+----------------
+Sinead and worked equal amounts on this project. We did some pair programming and some programming on our own. Sinead worked on adding the button functionality on the backend,
+and Andrew worked on the UI creating, reorganizing, and connecting the buttons to their methods, as well as patching bugs that appeared along the way. We both worked to finzlize
+the project and implement the "2nd" button which was a last minute decision, but worked out well. 

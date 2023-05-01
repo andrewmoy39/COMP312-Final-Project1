@@ -1,0 +1,27 @@
+Testing procedure:
+-------------------
+1. Test every button with the regular numbers
+2. Test every button using the Pi and e buttons
+3. Test the Pi and e buttons to make sure they do not stack in the text editor with ANY other number
+4. Test all buttons with inputs that are both integers, and doubles to make sure they are compatible.
+5. Any undefined functions do not give results, nor infinity
+
+Tests:
+9*8=72
+sin(90) = 1
+cos(90) = ~0
+tan(90) = undefined(no output)
+15MOD8 = 7.0
+7^2 = 49
+1/7 = 0.1428...
+log(1/7) = -0.845...
+e^4 = 54.5981....
+log(8!!) = infinity
+3*10^8 - speed of light - Press 3, press *, press 8, press 10^x, press =, = c
+
+
+
+Bugs:
+------------
+- factorials will crash if you press the button when the number is alreayd infinity
+- the binary of infinity is just 1111111111111111111111111111111 which is int.MAX_VALUE
