@@ -427,10 +427,16 @@ public class UI implements ActionListener {
             return;
          }
       }
+      
+      try {
+         checkNum = Double.parseDouble(text.getText());
+      } catch(NumberFormatException k) {
+
+      }
 
       /*
       * For Pi and E, they act differently from the number buttons because you are not supposed to concantenate them with other numbers,
-      * unlike the rest of the number buttons. They also do take a number to work, so they can be used when checkNum == null.
+      * unlike the rest of the number buttons. They also do not take a number to work, so they can be used when checkNum == null.
       * Therefore, they had to be placed away from the other button statements and we had to use some hackwork to get them
       * to function as intended. 
       */
@@ -514,11 +520,7 @@ public class UI implements ActionListener {
       }
       
       
-      try {
-         checkNum = Double.parseDouble(text.getText());
-      } catch(NumberFormatException k) {
-
-      }
+      
 
       if (checkNum != null || source == butCancel) {
          if (source == butAdd) {
