@@ -173,6 +173,9 @@ public class Calculator {
         
         //Calculates the factorial
         if (newMode == MonoOperatorModes.fact){
+            if(num == Integer.MAX_VALUE){
+                return 0.0;
+            }
             Double toReturn = num;
             Double temp = num;
             for(Double i=num;i>1;i--){
