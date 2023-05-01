@@ -209,12 +209,18 @@ public class Calculator {
         
         //switches the sign of the existing number. If 0, does nothing.
         if (newMode == MonoOperatorModes.neg){
-            if(num >0 && num != 0){
-                return -num;
-            }else if(num < 0 && num != 0){
+            if(num!=0){
+                return -1*num;
+            }else{
                 return num;
             }
-            
+            /*
+            if(num >0 && num != 0){
+                return -num;
+            }else if(num != 0){
+                return num;
+            }
+            */
         }
         
         //calculates the x^3
