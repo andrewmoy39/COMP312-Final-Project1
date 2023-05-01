@@ -407,6 +407,7 @@ public class UI implements ActionListener {
       butNeg.addActionListener(this);
       butSecond.addActionListener(this);
       but3rdSquare.addActionListener(this);
+      butDot.addActionListener(this);
       
       butEqual.addActionListener(this);
       butCancel.addActionListener(this);
@@ -446,6 +447,15 @@ public class UI implements ActionListener {
           }
           writer(calc.calculateMono(Calculator.MonoOperatorModes.e, reader()));
            
+         }
+      
+      //checks if '.' is in text selected, if so does not let user use it again while it exists in text
+      if (source == butDot){
+            if(text.getText().contains(".")){
+                return;
+            }
+             text.replaceSelection(".");
+            return;
          }
       
       /*
@@ -596,6 +606,7 @@ public class UI implements ActionListener {
          
          if (source == but3rdSquare)
              writer(calc.calculateMono(Calculator.MonoOperatorModes.thirdSq, reader()));
+         
          
          //---
          

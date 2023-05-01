@@ -27,13 +27,15 @@ public class Calculator {
 
     //extended operations from ex and on
     public enum MonoOperatorModes {
-        square, squareRoot, oneDividedBy, cos, sin, tan, log, rate, abs, ln, ex, pi,x2, th_sqrt, fact, tenx, twox,e,neg,thirdSq
+        square, squareRoot, oneDividedBy, cos, sin, tan, log, rate, abs, ln, ex, pi,x2, th_sqrt, fact, tenx, twox,e,neg,thirdSq,dot,
     }
 
-    private Double num1, num2;
+    private Double num1, num2, num3;
     private BiOperatorModes mode = BiOperatorModes.normal;
+    private int consecutive = 0;
 
     private Double calculateBiImpl() {
+        
         if (mode == BiOperatorModes.normal) {
             return num2;
         }
@@ -81,8 +83,10 @@ public class Calculator {
         // never reach
         throw new Error();
     }
-
+    
+    
     public Double calculateBi(BiOperatorModes newMode, Double num) {
+     
         if (mode == BiOperatorModes.normal) {
             num2 = 0.0;
             num1 = num;
@@ -90,6 +94,9 @@ public class Calculator {
             return NaN;
         } else {
             num2 = num;
+            num3 = num;
+            System.out.println(num);
+            System.out.println(num3);
             num1 = calculateBiImpl();
             mode = newMode;
             return num1;
@@ -210,9 +217,12 @@ public class Calculator {
             
         }
         
+        //calculates the x^3
         if (newMode == MonoOperatorModes.thirdSq){
             return pow(num,3) ;
         }
+        
+        
         
 
         // never reach
